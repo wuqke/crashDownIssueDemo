@@ -1,0 +1,22 @@
+
+#####java
+*/bin/
+*/target/
+*/build/
+*/target/
+
+#####front file
+*/node_modules/
+
+
+
+######Intellij
+*.iml
+*/*.iml
+
+#####some mac local files
+*/.settings/
+*/.DS_Store
+.DS_Store
+*/.idea/
+.idea/

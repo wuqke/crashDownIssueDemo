@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+
+    <!--<mvc:default-servlet-handler/>-->
+    <!-- 不拦截静态资源 -->
+    <mvc:annotation-driven/>
+    <!-- 配置自动扫描的包 -->
+    <context:component-scan base-package="com.wuqke.*"/>
+    <import resource="classpath:spring/provider.xml"/>
+
+    <!--&lt;!&ndash; 全局异常配置 start &ndash;&gt;-->
+    <!--<bean id="exceptionResolver" class="com.wuqke.base.LoggingExceptionResolver">-->
+        <!--<property name="exceptionMappings">-->
+            <!--<props>-->
+                <!--<prop key="java.lang.RuntimeException">error500</prop>-->
+                <!--<prop key="java.lang.Exception">error500</prop>-->
+            <!--</props>-->
+
+        <!--</property>-->
+        <!--&lt;!&ndash; 设置日志输出级别，不定义则默认不输出警告等错误日志信息 &ndash;&gt;-->
+        <!--<property name="warnLogCategory" value="INFO">-->
+        <!--</property>-->
+        <!--&lt;!&ndash; 默认错误页面，当找不到上面mappings中指定的异常对应视图时，使用本默认配置 &ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="defaultErrorView" value="errors/error"></property>&ndash;&gt;-->
+        <!--&lt;!&ndash; 默认HTTP状态码 &ndash;&gt;-->
+        <!--<property name="defaultStatusCode" value="500"></property>-->
+    <!--</bean>-->
+
+</beans>
